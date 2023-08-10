@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mangagi-dev.iml" filepath="$PROJECT_DIR$/.idea/mangagi-dev.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/mangogi-dev.iml" filepath="$PROJECT_DIR$/.idea/mangogi-dev.iml" />
     </modules>
   </component>
 </project>

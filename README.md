@@ -1,5 +1,5 @@
-## Mangagi Dev Chat
-Mangagi Dev is community of developers passionate about contributing to open-source projects
+## Mangogi Dev Chat
+Mangogi Dev is community of developers passionate about contributing to open-source projects
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
