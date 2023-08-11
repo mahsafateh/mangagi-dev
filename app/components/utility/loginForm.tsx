@@ -14,8 +14,6 @@ const LoginForm = () => {
       const { data } = await config
         .axiosHandle()
         .post("http://localhost:8080/Api/V1/Auth/Login", values);
-      console.log(data);
-      console.log("OKKKKKKKKKKK");
       setCookie("mangogi", data.token);
       window.location.replace("/dashboard");
     } catch (error) {
