@@ -24,7 +24,7 @@ const LoginForm = () => {
       </div>
       <div
         className={
-          "flex flex-col  justify-center items-center sm:w-6/12 fixed ml-4 -mt-20"
+          "flex flex-col justify-center items-center sm:w-6/12 fixed ml-4 -mt-20"
         }
       >
         <Image
