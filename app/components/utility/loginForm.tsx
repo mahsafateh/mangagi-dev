@@ -5,9 +5,20 @@ import Image from "next/image";
 import MangogiIcon from "@/public/mangogi-icon.png";
 import Mangogi from "@/public/mangogi-svg.svg";
 import Link from "next/link";
+import config from "@/app/lib/config/config";
+import { setCookie } from "cookies-next";
+
 const LoginForm = () => {
-  const onFinish = (values: any) => {
-    console.log("Success:", values);
+  const loginHandler = async (values: LoginUser) => {
+    try {
+      const { data } = await config
+        .axiosHandle()
+        .post("http://localhost:8080/Api/V1/Auth/Login", values);
+      setCookie("mangogi", data.token);
+      window.location.replace("/dashboard");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const onFinishFailed = (errorInfo: any) => {
@@ -38,15 +49,15 @@ const LoginForm = () => {
           labelCol={{ span: 4 }}
           wrapperCol={{ span: 16 }}
           className={"w-full"}
-          onFinish={onFinish}
+          onFinish={loginHandler}
           onFinishFailed={onFinishFailed}
           style={{
             marginTop: "-10px",
           }}
         >
           <Form.Item<LoginUser>
-            label={"Username"}
-            name={"username"}
+            label={"Email"}
+            name={"email"}
             rules={[{ required: true, message: "Please input your username!" }]}
           >
             <Input />
@@ -60,7 +71,7 @@ const LoginForm = () => {
           </Form.Item>
           <Form.Item wrapperCol={{ offset: 10 }}>
             <Button type={"primary"} htmlType="submit">
-              Submit
+              Login
             </Button>
           </Form.Item>
         </Form>
