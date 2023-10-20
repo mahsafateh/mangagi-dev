@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Register from "@/app/components/utility/registeration";
 
 export const metadata: Metadata = {
   title: "Register",
@@ -6,9 +7,5 @@ export const metadata: Metadata = {
 };
 
 export default function RegisterPage() {
-  return (
-    <div>
-      <h1>reg</h1>
-    </div>
-  );
+  return <Register />;
 }
